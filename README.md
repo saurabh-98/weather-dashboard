@@ -1,59 +1,303 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌦 Weather Dashboard Web Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern and responsive Weather Dashboard web application developed using Laravel, JavaScript, Bootstrap 5, and OpenWeather API integration.
 
-## About Laravel
+This application allows users to search weather information by city name and view real-time weather data through an interactive and responsive user interface.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# 📌 Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The Weather Dashboard application was developed as part of a technical assessment.
 
-## Learning Laravel
+The application provides users with:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Real-time weather information
+- City-based weather search
+- Current location weather
+- Dynamic weather conditions
+- Responsive modern UI
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The project focuses on API integration, responsive frontend design, JavaScript functionality, and clean Laravel architecture.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# 🚀 Features
 
-### Premium Partners
+## 🌐 Core Features
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Search weather by city name
+- Real-time weather API integration
+- Current temperature display
+- Weather condition display
+- Dynamic weather icons
+- Humidity information
+- Wind speed information
+- Feels-like temperature
+- Current date & time
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ✨ Additional Features
 
-## Code of Conduct
+- Current location weather
+- 5-day weather forecast
+- Loading animations
+- Dynamic weather background
+- Responsive UI design
+- Error handling
+- Enter key search support
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+# ⚙️ Tech Stack
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Technology | Version |
+|------------|---------|
+| PHP | 8.2+ |
+| Laravel | 12 |
+| HTML5 | Latest |
+| CSS3 | Latest |
+| JavaScript | ES6 |
+| Bootstrap | 5 |
+| jQuery | 3+ |
+| OpenWeather API | Latest |
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 💻 System Requirements
+
+Before installation, ensure your system has:
+
+- PHP 8.2+
+- Composer
+- Git
+- XAMPP / WAMP / Laragon
+
+---
+
+# 📂 Project Structure
+
+```plaintext
+app/
+bootstrap/
+config/
+public/
+resources/
+routes/
+storage/
+vendor/
+```
+
+---
+
+# 📦 Installation Guide
+
+## Step 1 — Clone Repository
+
+```bash
+git clone https://github.com/saurabh-98/weather-dashboard.git
+```
+
+---
+
+## Step 2 — Open Project Directory
+
+```bash
+cd weather-dashboard
+```
+
+---
+
+## Step 3 — Install Composer Dependencies
+
+```bash
+composer install
+```
+
+---
+
+## Step 4 — Create Environment File
+
+### Windows
+
+```bash
+copy .env.example .env
+```
+
+### Linux / Mac
+
+```bash
+cp .env.example .env
+```
+
+---
+
+## Step 5 — Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+---
+
+# 🔑 Weather API Configuration
+
+This project uses the OpenWeather API for fetching real-time weather data.
+
+## API Base URL
+
+```plaintext
+https://api.openweathermap.org/data/2.5
+```
+
+## Generate API Key
+
+Create your API key from:
+
+https://openweathermap.org/api
+
+## Add API Key inside `.env`
+
+```env
+WEATHER_API_KEY=your_weather_api_key
+```
+
+## Example API Request
+
+```plaintext
+https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=YOUR_API_KEY&units=metric
+```
+
+
+---
+
+# ▶️ Run Application
+
+Start Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Application URL:
+
+```plaintext
+http://127.0.0.1:8000
+```
+
+---
+
+# 🌦 Weather Information Displayed
+
+After searching a city, the application displays:
+
+- City Name
+- Temperature
+- Weather Condition
+- Weather Icon
+- Humidity
+- Wind Speed
+- Feels-like Temperature
+- Current Date & Time
+
+---
+
+# ⚡ API Features
+
+- Real-time weather data
+- Dynamic API integration
+- Error handling
+- Invalid city validation
+- Loading states
+- API failure handling
+
+---
+
+# 🎨 UI/UX Features
+
+- Modern responsive UI
+- Interactive weather cards
+- Dynamic weather icons
+- Responsive layouts
+- Mobile-friendly interface
+- Smooth animations and transitions
+
+---
+
+# 📱 Responsive Design
+
+Fully responsive across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile Devices
+
+---
+
+# 🔒 Validation & Error Handling
+
+- Empty input validation
+- Invalid city validation
+- API error handling
+- Network failure handling
+
+---
+
+# 📂 Important Artisan Commands
+
+## Clear Cache
+
+```bash
+php artisan optimize:clear
+```
+
+---
+
+## Route List
+
+```bash
+php artisan route:list
+```
+
+---
+
+## Start Development Server
+
+```bash
+php artisan serve
+```
+
+---
+
+# 🧪 Project Testing Checklist
+
+- Weather search working
+- API integration working
+- Current location working
+- 5-day forecast working
+- Responsive UI working
+- Error handling working
+- Dynamic weather display working
+
+---
+
+# 👨‍💻 Developed By
+
+## Saurabh Jha
+
+GitHub:
+https://github.com/saurabh-98
+
+---
+
+# 📄 License
+
+This project is developed for technical assessment and educational purposes.
+
+---
+
+# 🙌 Acknowledgement
+
+This project was developed as part of a Weather Dashboard technical assessment using Laravel and OpenWeather API.
